@@ -11,9 +11,11 @@ themeToggle.addEventListener('click', () => {
     html.classList.toggle('dark', !isDark);
     if(isDark){
         themeToggle.innerHTML = '<img src="dark mode.png" alt="" class="theme">';
+       
     }
     else{
         themeToggle.innerHTML = '<img src="light mode.png" alt="" class="theme">';
+
     }
     localStorage.setItem('theme', isDark ? 'light' : 'dark');
 });

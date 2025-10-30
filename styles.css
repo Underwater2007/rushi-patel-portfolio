@@ -12,6 +12,9 @@
     --secondary-foreground: hsl(220, 20%, 20%);
     --muted-foreground: hsl(220, 15%, 45%);
     --accent: hsl(220, 15%, 88%);
+    --btn-border:1px solid #c9cdd6;
+    --contact-font: rgb(0, 0, 0);
+    --contact-bg: #ffffff;
 }
 .dark {
     --background: hsl(222, 15%, 8%);
@@ -26,6 +29,9 @@
     --secondary-foreground: hsl(220, 10%, 90%);
     --muted-foreground: hsl(220, 10%, 70%);
     --accent: hsl(222, 10%, 14%);
+    --btn-border:1px solid #414245;
+    --contact-font: white;
+    --contact-bg: #111317;
 }
 
 /* Reset and Base Styles */
@@ -542,18 +548,22 @@ body {
 .contact-txt{
     font-size: 16px;
     text-align: center;
-}   
+}  
 .contact-item {
     text-align: center;
     height: 50px;
     margin-bottom: 20px;
+}
+#contact-btn{
+    background-color: var(--contact-bg);
+    border: var(--btn-border);
+    color: var(--contact-font);
 }
 .contact-item-title {
     font-size: 1.125rem;
     font-weight: 600;
     margin-bottom: 1rem;
 }
-
 
 /* Footer */
 .footer {
