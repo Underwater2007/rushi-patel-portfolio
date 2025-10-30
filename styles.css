@@ -131,7 +131,6 @@ body {
     z-index: 10;
     padding: 5rem 1rem;
 }
-
 .hero-grid {
     display: grid;
     gap: 3rem;
