@@ -15,6 +15,7 @@
     --btn-border:1px solid #c9cdd6;
     --contact-font: rgb(0, 0, 0);
     --contact-bg: #ffffff;
+    --linkBorder: #ffffff;
 }
 .dark {
     --background: hsl(222, 15%, 8%);
@@ -32,6 +33,7 @@
     --btn-border:1px solid #414245;
     --contact-font: white;
     --contact-bg: #111317;
+    --linkBorder: #111317;
 }
 
 /* Reset and Base Styles */
@@ -423,6 +425,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    max-height: 100px;
 }
 
 .tag {
@@ -431,6 +434,24 @@ body {
     color: var(--secondary-foreground);
     border-radius: 9999px;
     font-size: 0.875rem;
+}
+.link-github{
+    position: relative;
+    bottom: 0;
+    margin-top: 30px;
+}
+.githubLink{
+    padding: .60rem 3rem;
+    border-radius:9999px;
+    border-color: var(--linkBorder);
+    border:1px solid;
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+    text-decoration: none;
+    
+}
+.link-github:hover{
+    transform: translateY(-5px) ;
 }
 
 /* Skills Section */
