@@ -1,74 +1,124 @@
-// Theme Toggle Functionality
-const themeToggle = document.getElementById('themeToggle');
+// Theme toggle
+const themeToggle = document.getElementById("themeToggle");
 const html = document.documentElement;
 
-// Load theme from localStorage or default to dark
-const currentTheme = localStorage.getItem('theme') || 'dark';
-html.classList.toggle('dark', currentTheme === 'dark');
+const savedTheme = localStorage.getItem("theme") || "dark";
 
-themeToggle.addEventListener('click', () => {
-    const isDark = html.classList.contains('dark');
-    html.classList.toggle('dark', !isDark);
-    if(isDark){
-        themeToggle.innerHTML = '<img src="dark mode.png" alt="" class="theme">';
-       
-    }
-    else{
-        themeToggle.innerHTML = '<img src="light mode.png" alt="" class="theme">';
+function updateThemeIcon() {
+    const isDark = html.classList.contains("dark");
 
-    }
-    localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    themeToggle.innerHTML = `
+        <img
+            src="${isDark ? "light mode.png" : "dark mode.png"}"
+            alt=""
+            class="theme"
+        >
+    `;
+
+    themeToggle.setAttribute(
+        "aria-label",
+        isDark ? "Switch to light mode" : "Switch to dark mode"
+    );
+}
+
+html.classList.toggle("dark", savedTheme === "dark");
+updateThemeIcon();
+
+themeToggle.addEventListener("click", () => {
+    html.classList.toggle("dark");
+
+    const newTheme = html.classList.contains("dark") ? "dark" : "light";
+
+    localStorage.setItem("theme", newTheme);
+    updateThemeIcon();
 });
 
-// Typing Animation for Skills
-const skills = ['Java', 'Python', 'C#', 'JavaScript', 'Data Structures', 'Git'];
+
+// Rotating technologies
+const skills = [
+    "Python",
+    "Java",
+    "React",
+    "Next.js",
+    "Full-Stack Development",
+    "AI / LLM Integration",
+    "Desktop Applications",
+    "Software Engineering"
+];
+
+const typingText = document.getElementById("typingText");
 let currentSkillIndex = 0;
-const typingText = document.getElementById('typingText');
 
 function rotateSkills() {
     currentSkillIndex = (currentSkillIndex + 1) % skills.length;
     typingText.textContent = skills[currentSkillIndex];
 }
 
-setInterval(rotateSkills, 2000);
+const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+).matches;
 
-// Smooth Scroll Function
+if (!prefersReducedMotion) {
+    setInterval(rotateSkills, 2000);
+}
+
+
+// Smooth scrolling
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
+
     if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
+        section.scrollIntoView({
+            behavior: prefersReducedMotion ? "auto" : "smooth"
+        });
     }
 }
 
-// Copy Email Functionality
+
+// Copy email
 function copyEmail() {
-    const email = 'patelrushi2007@gmail.com';
-    navigator.clipboard.writeText(email).then(() => {
-        alert('Email copied to clipboard!');
-    }).catch(err => {
-        console.error('Failed to copy email:', err);
-    });
+    const email = "YOUR_EMAIL_HERE";
+
+    navigator.clipboard.writeText(email)
+        .then(() => {
+            const button = document.querySelector(
+                '.contact-item button .contact-txt'
+            );
+
+            if (!button) return;
+
+            const originalText = button.textContent;
+
+            button.textContent = "Copied!";
+
+            setTimeout(() => {
+                button.textContent = originalText;
+            }, 1800);
+        })
+        .catch((error) => {
+            console.error("Failed to copy email:", error);
+        });
 }
 
-//Add fade-in animation on scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
+// Fade-in animation
+if (!prefersReducedMotion) {
+    const observerOptions = {
+        threshold: 0.08,
+        rootMargin: "0px 0px -60px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+
+            entry.target.classList.add("section-visible");
+            observer.unobserve(entry.target);
+        });
+    }, observerOptions);
+
+    document.querySelectorAll("main section").forEach((section) => {
+        section.classList.add("section-hidden");
+        observer.observe(section);
     });
-}, observerOptions);
-
-// Observe all sections
-document.querySelectorAll('section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(section);
-});
+}

@@ -1,234 +1,565 @@
-</body>
-</html>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software Engineering Portfolio</title>
-    <meta name="description" content="Portfolio of a software engineering student showcasing projects">
-    <meta property="og:description" content="Explore my software engineering projects and technical skills in game development and data structures.">
-    <meta property="og:type" content="website">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Rushi Patel | Software Engineering Portfolio</title>
+
+    <meta
+      name="description"
+      content="Software Engineering portfolio of Rushi Patel, featuring full-stack development, AI applications, Java projects, and software engineering experience."
+    />
+
+    <meta
+      property="og:title"
+      content="Rushi Patel | Software Engineering Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Explore my software engineering experience, projects, technical skills, and development work."
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container nav-content">
-            <div class="logo">Rushi Patel</div>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><img src="light mode.png" alt="" class="theme"></button>
+      <div class="container nav-content">
+        <a href="#hero" class="logo">Rushi Patel</a>
+
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contacts">Contact</a>
         </div>
+
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          aria-label="Toggle light and dark theme"
+        >
+          <img src="light mode.png" alt="" class="theme" />
+        </button>
+      </div>
     </nav>
 
-    <!-- progile Section -->
-    <section class="hero" id="hero">
+    <main>
+      <!-- Hero -->
+      <section class="hero" id="hero">
         <div class="hero-background"></div>
         <div class="hero-overlay"></div>
+
         <div class="container hero-content">
-            <div class="hero-grid">
-                <div class="hero-text">
-                    <h1>Software Engineering Student</h1>
-                    <div class="skill-display">
-                        <p class="typing-text" id="typingText">Java</p>
-                    </div>
-                    <p class="hero-description">
-                        Building innovative applications and solving complex problems through code.
-                        Passionate about game development and data structures.
-                    </p>
-                    <div class="hero-buttons">
-                        <button class="btn btn-primary" onclick="scrollToSection('projects')">View Projects</button>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="profile-glow"></div>
-                    <div class="profile-picture">
-                        <img src="IMG-20260623-WA0011.jpg" alt="" class="profile-pic">
-                    </div>
-                </div>
-        </div>
-    </section>
+          <div class="hero-grid">
+            <div class="hero-text">
+              <p class="hero-eyebrow">Software Engineering Student</p>
 
-    <!-- About Section -->
-    <section class="about-section">
+              <h1>Building practical software from ideas to deployment.</h1>
+
+              <div class="skill-display">
+                <span class="typing-prefix">Focused on</span>
+                <p class="typing-text" id="typingText">Python</p>
+              </div>
+
+              <p class="hero-description">
+                Second-year Software Engineering student at the University of
+                Ottawa with experience in full-stack development, AI-powered
+                applications, Java software, and desktop development.
+              </p>
+
+              <div class="hero-buttons">
+                <button
+                  class="btn btn-primary"
+                  onclick="scrollToSection('projects')"
+                >
+                  View Projects
+                </button>
+
+                <button
+                  class="btn btn-secondary"
+                  onclick="scrollToSection('contacts')"
+                >
+                  Contact Me
+                </button>
+              </div>
+            </div>
+
+            <div class="hero-image">
+              <div class="profile-glow"></div>
+
+              <div class="profile-picture">
+                <img
+                  src="IMG-20260623-WA0011.jpg"
+                  alt="Portrait of Rushi Patel"
+                  class="profile-pic"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="about-section" id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-card">
-                <p class="about-text">
-                    I'm a passionate software engineering student with a strong foundation in
-                    multiple programming languages and a love for creating engaging applications.
-                    My jour ney in computer science has led me to explore various domains, from
-                    game development to complex data structures.
+          <h2 class="section-title">About Me</h2>
+
+          <div class="about-card">
+            <p class="about-text">
+              I'm a second-year
+              <span class="highlight"
+                >Software Engineering student at the University of Ottawa</span
+              >
+              interested in building practical applications and understanding
+              how software systems work from design through deployment.
+            </p>
+
+            <p class="about-text secondary">
+              My experience spans
+              <span class="highlight">full-stack web development</span>,
+              <span class="highlight">AI-integrated desktop applications</span>,
+              Java software, game development, and user-interface design. I
+              enjoy working on projects that combine technical problem-solving
+              with real-world functionality.
+            </p>
+
+            <p class="about-text secondary">
+              Through professional work and independent projects, I've gained
+              experience with technologies including Python, Java, JavaScript,
+              React, Next.js, PySide6, Git, REST APIs, and local LLM
+              integration. I'm continually expanding my skills and looking for
+              opportunities to contribute to meaningful software projects.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="experience-section" id="experience">
+        <div class="container">
+          <h2 class="section-title">Experience</h2>
+
+          <div class="experience-grid">
+            <article class="experience-card">
+              <div class="experience-header">
+                <div>
+                  <h3 class="experience-title">
+                    Full-Stack Web Developer Co-op
+                  </h3>
+
+                  <p class="experience-company">Krishtrans Logistics LLC</p>
+                </div>
+
+                <span class="experience-date"> May 2026 – Sep 2026 </span>
+              </div>
+
+              <ul class="experience-list">
+                <li>
+                  Developed and deployed a responsive company website using
+                  Next.js, React, JavaScript, and Tailwind CSS.
+                </li>
+
+                <li>
+                  Built contact and quote-request forms using the Resend Email
+                  API.
+                </li>
+
+                <li>
+                  Configured GitHub, Vercel, custom domains, DNS, and SSL for
+                  production deployment.
+                </li>
+
+                <li>
+                  Worked directly with the client to translate business
+                  requirements into production-ready features.
+                </li>
+              </ul>
+            </article>
+
+            <article class="experience-card">
+              <div class="experience-header">
+                <div>
+                  <h3 class="experience-title">Nursery Associate</h3>
+
+                  <p class="experience-company">Alternative Group</p>
+                </div>
+
+                <span class="experience-date"> Jun 2026 – Aug 2026 </span>
+              </div>
+
+              <ul class="experience-list">
+                <li>
+                  Assisted customers with product selection and provided
+                  knowledgeable service.
+                </li>
+
+                <li>
+                  Maintained plant health through watering, fertilizing,
+                  pruning, and routine monitoring.
+                </li>
+
+                <li>
+                  Organized and restocked plants and gardening supplies
+                  throughout the sales area.
+                </li>
+              </ul>
+            </article>
+
+            <article class="experience-card">
+              <div class="experience-header">
+                <div>
+                  <h3 class="experience-title">
+                    Multimedia Designer & AV Team Member
+                  </h3>
+
+                  <p class="experience-company">BAPS Hindu Temple</p>
+                </div>
+
+                <span class="experience-date"> Jun 2023 – Sep 2025 </span>
+              </div>
+
+              <ul class="experience-list">
+                <li>
+                  Designed event graphics and edited videos using Photoshop,
+                  Illustrator, and DaVinci Resolve.
+                </li>
+
+                <li>
+                  Operated microphones, speakers, lighting, and OBS for weekly
+                  assemblies of 250–500 attendees.
+                </li>
+
+                <li>
+                  Collaborated with a 10-member team to coordinate multimedia
+                  and audio-visual operations.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="projects-section" id="projects">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <h2 class="section-title">Featured Projects</h2>
+
+              <p class="section-subtitle">
+                A selection of projects demonstrating AI integration, software
+                design, algorithms, and application development.
+              </p>
+            </div>
+
+            <a
+              href="https://github.com/Underwater2007?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="section-link"
+            >
+              View All on GitHub
+            </a>
+          </div>
+
+          <div class="projects-grid">
+            <!-- Nexora -->
+            <a
+              href="https://github.com/Underwater2007/Nexora"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+              aria-label="View Nexora on GitHub"
+            >
+              <article class="project-card featured-project">
+                <div class="project-header">
+                  <div>
+                    <span class="project-label">Featured Project</span>
+
+                    <h3 class="project-title">Nexora</h3>
+                  </div>
+
+                  <span class="project-arrow" aria-hidden="true"> ↗ </span>
+                </div>
+
+                <p class="project-description">
+                  Local AI desktop assistant built in Python with voice
+                  interaction, LLM integration, modular tool calling, desktop
+                  automation, reminders, and system monitoring.
                 </p>
-                <p class="about-text secondary">
-                    Through hands-on projects like developing a console-based <span class="highlight">Battleship game</span> and
-                    a GUI-based <span class="highlight">Candy Crush replica</span>, I've honed my skills in problem-solving,
-                    algorithm design, and user interface development. I'm always eager to learn
-                    new technologies and take on challenging projects.
+
+                <div class="tech-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">PySide6</span>
+                  <span class="tag">Ollama</span>
+                  <span class="tag">Qwen</span>
+                  <span class="tag">openWakeWord</span>
+                  <span class="tag">Piper</span>
+                  <span class="tag">Multithreading</span>
+                </div>
+              </article>
+            </a>
+
+            <!-- Method Analyzer -->
+            <a
+              href="https://github.com/Underwater2007/Method-Analyzer"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+              aria-label="View Method Analyzer on GitHub"
+            >
+              <article class="project-card">
+                <div class="project-header">
+                  <h3 class="project-title">Method Analyzer</h3>
+
+                  <span class="project-arrow" aria-hidden="true"> ↗ </span>
+                </div>
+
+                <p class="project-description">
+                  Java static-analysis tool that processes source files and
+                  extracts method-level information using heuristic parsing
+                  without requiring a full compiler parser.
                 </p>
-                <p class="about-text secondary">
-                    I believe in writing clean, efficient code and am constantly working to
-                    improve my craft. Whether it's mastering a new programming language or
-                    implementing complex algorithms, I approach every challenge with enthusiasm
-                    and dedication.
+
+                <div class="tech-tags">
+                  <span class="tag">Java</span>
+                  <span class="tag">OOP</span>
+                  <span class="tag">Static Analysis</span>
+                  <span class="tag">Heuristic Parsing</span>
+                  <span class="tag">File I/O</span>
+                </div>
+              </article>
+            </a>
+
+            <!-- Candy Crush -->
+            <a
+              href="https://github.com/Underwater2007/CandyCrush-Replica"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+              aria-label="View Candy Crush Replica on GitHub"
+            >
+              <article class="project-card">
+                <div class="project-header">
+                  <h3 class="project-title">Candy Crush Replica</h3>
+
+                  <span class="project-arrow" aria-hidden="true"> ↗ </span>
+                </div>
+
+                <p class="project-description">
+                  Java match-three game featuring grid-based swapping, match
+                  detection, scoring, automatic board refilling, move
+                  validation, hints, animations, and audio.
                 </p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section class="projects-section" id="projects">
+                <div class="tech-tags">
+                  <span class="tag">Java</span>
+                  <span class="tag">Swing</span>
+                  <span class="tag">OOP</span>
+                  <span class="tag">Algorithms</span>
+                  <span class="tag">Multithreading</span>
+                </div>
+              </article>
+            </a>
+
+            <!-- Mouse and Cat -->
+            <a
+              href="https://github.com/Underwater2007/Mouse-and-Cat"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+              aria-label="View Mouse and Cat on GitHub"
+            >
+              <article class="project-card">
+                <div class="project-header">
+                  <h3 class="project-title">Mouse and Cat</h3>
+
+                  <span class="project-arrow" aria-hidden="true"> ↗ </span>
+                </div>
+
+                <p class="project-description">
+                  C# game built with MonoGame featuring real-time movement,
+                  collision logic, randomized gameplay elements, and
+                  progressively increasing difficulty.
+                </p>
+
+                <div class="tech-tags">
+                  <span class="tag">C#</span>
+                  <span class="tag">MonoGame</span>
+                  <span class="tag">OOP</span>
+                  <span class="tag">Game Development</span>
+                </div>
+              </article>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="skills-section" id="skills">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <a href="https://github.com/Underwater2007/Method-Analyzer" target="_blank">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">Method Analyzer</h3>
-                    </div>
-                    <p class="project-description">
-                   Method Analyzer is a lightweight static analysis tool written in Java that scans Java source files and extracts method-level metrics using heuristic parsing. The analyzer detects valid method declarations, counts parameters, identifies getters and setters, and filters out control structures such as conditionals and loops.
-                    </p>
-                    <div class="tech-tags">
-                        <span class="tag">Java</span>
-                        <span class="tag">Static Analysis</span>
-                        <span class="tag">Layered Architecture</span>
-                        <span class="tag">Heuristic Parsing</span>
-                        <span class="tag">File I/O</span>
-                        <span class="tag">Defensive Programming</span>
-                    </div>
-                </div></a>
-                <a href="https://github.com/ThePodsters/ThePodsters" target="_blank">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">The Podsters</h3>
-                    </div>
-                    <p class="project-description">
-                       Our team of five created a product website using HTML, CSS, and JavaScript, focusing on clean design, responsiveness, and user-friendly features.
-                        The project showcased our ability to collaboratively plan, build, and implement a fully functional front-end site.
-                    </p>
-                    <div class="tech-tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">Java Script</span>
-                        <span class="tag">Collaboration</span>
-                    </div>
-                </div></a>
-                <a href="https://github.com/Underwater2007/Battleship-java" target="_blank">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">Battleship Game</h3>
-                    </div>
-                    <p class="project-description">
-                        Console-based replica of the classic Battleship game featuring player vs computer gameplay. 
-                        Players manually input ship placements and attack coordinates through command-line interface.
-                    </p>
-                    <div class="tech-tags">
-                        <span class="tag">Console App</span>
-                        <span class="tag">Game Logic</span>
-                        <span class="tag">AI Strategy</span>
-                        <span class="tag">Algorithms</span>
-                        <span class="tag">Computer Opponent</span>
-                    </div>
-                </div></a>
-                <a href="https://github.com/Underwater2007/CandyCrush-Replica" target="_blank">
-                 <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">Candy Crush</h3>
-                    </div>
-                    <p class="project-description">
-                        GUI-based replica of Candy Crush implementing complex data structures for game mechanics. 
-                        Features smooth animations, match detection algorithms, and cascading effects.
-                    </p>
-                    <div class="tech-tags">
-                        <span class="tag">GUI</span>
-                        <span class="tag">Data Structures</span>
-                        <span class="tag">Game Development</span>
-                        <span class="tag">Algorithms</span>
-                    </div>
-                </div></a>
-            </div>
-        </div>
-    </section>
+          <h2 class="section-title">Technical Skills</h2>
 
-    <!-- Skills Section -->
-    <section class="skills-section">
+          <div class="skills-categories">
+            <div class="skills-category">
+              <h3>Languages</h3>
+
+              <div class="skills-grid">
+                <div class="skill-card">
+                  <img src="python.png" alt="Python logo" class="skill_Img" />
+                  <p class="skill-name">Python</p>
+                </div>
+
+                <div class="skill-card">
+                  <img src="java.png" alt="Java logo" class="skill_Img" />
+                  <p class="skill-name">Java</p>
+                </div>
+
+                <div class="skill-card">
+                  <img src="csharp.png" alt="C Sharp logo" class="skill_Img" />
+                  <p class="skill-name">C#</p>
+                </div>
+
+                <div class="skill-card">
+                  <img src="js.png" alt="JavaScript logo" class="skill_Img" />
+                  <p class="skill-name">JavaScript</p>
+                </div>
+
+                <div class="skill-card">
+                  <img src="html.png" alt="HTML logo" class="skill_Img" />
+                  <p class="skill-name">HTML</p>
+                </div>
+
+                <div class="skill-card">
+                  <img src="css.png" alt="CSS logo" class="skill_Img" />
+                  <p class="skill-name">CSS</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills-category">
+              <h3>Frameworks & Technologies</h3>
+
+              <div class="skill-tag-grid">
+                <span class="skill-pill">React</span>
+                <span class="skill-pill">Next.js</span>
+                <span class="skill-pill">PySide6</span>
+                <span class="skill-pill">Tailwind CSS</span>
+                <span class="skill-pill">MonoGame</span>
+                <span class="skill-pill">Ollama</span>
+                <span class="skill-pill">Qwen</span>
+                <span class="skill-pill">REST APIs</span>
+              </div>
+            </div>
+
+            <div class="skills-category">
+              <h3>Tools & Software Engineering</h3>
+
+              <div class="skill-tag-grid">
+                <span class="skill-pill">Git</span>
+                <span class="skill-pill">GitHub</span>
+                <span class="skill-pill">Vercel</span>
+                <span class="skill-pill">VS Code</span>
+                <span class="skill-pill">Visual Studio</span>
+                <span class="skill-pill">OOP</span>
+                <span class="skill-pill">Data Structures & Algorithms</span>
+                <span class="skill-pill">Multithreading</span>
+                <span class="skill-pill">Event-Driven Programming</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact-section" id="contacts">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <img src="java.png" alt="" id="java" class="skill_Img">
-                    <p class="skill-name">Java</p>
-                </div>
-                <div class="skill-card">
-                    <img src="python.png" alt="" id="python" class="skill_Img">
-                    <p class="skill-name" id="pytxt">Python</p>
-                </div>
-                <div class="skill-card">
-                    <img src="csharp.png" alt="" id="csharp" >
-                    <p class="skill-name" id="cshart_txt">C#</p>
-                </div>
-                <div class="skill-card">
-                    <img src="html.png" alt="" id="html" class="skill_Img">
-                    <p class="skill-name">HTML</p>
-                </div>
-                <div class="skill-card">
-                    <img src="css.png" alt="" class="skill_Img" id="css">
-                    <p class="skill-name">CSS</p>
-                </div>
-                <div class="skill-card">
-                    
-                    <img src="js.png" alt="" class="skill_Img" id="js">
-                    <p class="skill-name">JavaScript</p>
-                </div>
-                <div class="skill-card">
-                    <img src="git.png" alt="" class="skill_Img" id="git">
-                    <p class="skill-name">Git</p>
-                </div>
-                <div class="skill-card">
-                    <img src="monogame.png" alt="" class="skill_Img" id="monogame">
-                    <p class="skill-name">Monogame</p>
-                </div>
-            </div>
-        </div>
-    </section>
+          <div class="contact-header">
+            <h2 class="section-title">Let's Connect</h2>
 
-    <!-- Contact Section -->
-    <section class="contact-section" id="contacts">
-        <div class="container">
-            <div class="contact-header">
-                <h2 class="section-title">Let's Connect</h2>
-                <p class="contact-subtitle">Get in touch for collaborations or just a friendly hello</p>
+            <p class="contact-subtitle">
+              Interested in working together or discussing software, projects,
+              and opportunities? Feel free to reach out.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-item">
+              <h3 class="contact-item-title">Email</h3>
+
+              <button
+                class="btn btn-full"
+                id="contact-btn"
+                onclick="copyEmail()"
+              >
+                <img
+                  src="email.png"
+                  alt=""
+                  class="email-icon"
+                  id="connect-icon"
+                />
+
+                <span class="contact-txt"> Copy Email </span>
+              </button>
             </div>
 
-            <div class="contact-grid">
-                <div class="contact-item" >
-                    <h3 class="contact-item-title">Email</h3>
-                    <button class="btn  btn-full"  id="contact-btn" onclick="copyEmail()" >
-                        <img src="email.png" alt="" class="email-icon" id="connect-icon">
-                        <p class="contact-txt" >Copy Email</p>
-                    </button>
-                </div>
-                
+            <div class="contact-item">
+              <h3 class="contact-item-title">GitHub</h3>
 
-                <div class="contact-item">
-                    <h3 class="contact-item-title">GitHub</h3>
-                    <a href="https://github.com/Underwater2007?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-full"  id="contact-btn" >
-                        <img src="github.png" alt="" class="github-icon" id="connect-icon">
-                        <p class="contact-txt">View Profile</p>
-                    </a>
-                </div>
+              <a
+                href="https://github.com/Underwater2007"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-full"
+              >
+                <img
+                  src="github.png"
+                  alt=""
+                  class="github-icon"
+                  id="connect-icon"
+                />
 
-                <div class="contact-item">
-                    <h3 class="contact-item-title">LinkedIn</h3>
-                    <a href="https://www.linkedin.com/in/rushi-patel-software-engineer" target="_blank" rel="noopener noreferrer" class="btn btn-full"  id="contact-btn" >
-                        <img src="linkedin.png" alt="" class="linkedin-icon" id="connect-icon">
-                        <p class="contact-txt">Connect</p>
-                    </a>
-                </div>
-            </div> 
+                <span class="contact-txt"> View Profile </span>
+              </a>
+            </div>
+
+            <div class="contact-item">
+              <h3 class="contact-item-title">LinkedIn</h3>
+
+              <a
+                href="https://www.linkedin.com/in/rushi-patel-software-engineer/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-full"
+              >
+                <img
+                  src="linkedin.png"
+                  alt=""
+                  class="linkedin-icon"
+                  id="connect-icon"
+                />
+
+                <span class="contact-txt"> Connect </span>
+              </a>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>© 2026 Rushi Patel</p>
+
+        <a href="#hero"> Back to top ↑ </a>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
